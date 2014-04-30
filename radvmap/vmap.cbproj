@@ -1,0 +1,312 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3fff9928-7c53-4826-a6ac-e9e83c1e7b7e}</ProjectGuid>
+        <ProjectType>CppVCLApplication</ProjectType>
+        <MainSource>decode.cpp</MainSource>
+        <Config Condition="'$(Config)'==''">Release Build</Config>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>14.3</ProjectVersion>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug Build' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release Build' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_Locale>1041</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Optimize>false</DCC_Optimize>
+        <OutputExt>exe</OutputExt>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+        <ILINK_AppType>Windows</ILINK_AppType>
+        <BCC_GenerateWindowsApp>true</BCC_GenerateWindowsApp>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <ILINK_AllWarnings>true</ILINK_AllWarnings>
+        <BCC_ZeroLengthEmptyMemberFuncs>true</BCC_ZeroLengthEmptyMemberFuncs>
+        <DCC_MakeModifiedUnits>true</DCC_MakeModifiedUnits>
+        <FinalOutputDir>.</FinalOutputDir>
+        <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+        <TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+        <PackageImports>vcl.bpi;rtl.bpi;vclx.bpi;bcbsmp.bpi;$(PackageImports)</PackageImports>
+        <DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
+        <BCC_StackFrames>true</BCC_StackFrames>
+        <BRCC_UserSuppliedOptions> -I$(BDS)\Projects;$(BDS)\include;$(BDS)\include\vcl;C:\aviimage;C:\src\avicorr;C:\vmap\avicorr;$(BDS)\include\dinkumware</BRCC_UserSuppliedOptions>
+        <BCC_PCHCache>true</BCC_PCHCache>
+        <BCC_IntegerSizedEnums>false</BCC_IntegerSizedEnums>
+        <BCC_IncludePath>$(BDS)\Projects;$(BDS)\include;$(BDS)\include\vcl;C:\aviimage;C:\src\avicorr;C:\vmap\avicorr;$(BDS)\include\dinkumware;$(BCC_IncludePath)</BCC_IncludePath>
+        <TASM_IncludePath>$(BDS)\Projects;$(BDS)\include;$(BDS)\include\vcl;C:\aviimage;C:\src\avicorr;C:\vmap\avicorr;$(BDS)\include\dinkumware;$(TASM_IncludePath)</TASM_IncludePath>
+        <AllPackageLibs>vcl.lib;rtl.lib;vclx.lib;vclimg.lib</AllPackageLibs>
+        <BRCC_IncludePath>$(BDS)\Projects;$(BDS)\include;$(BDS)\include\vcl;C:\aviimage;C:\src\avicorr;C:\vmap\avicorr;$(BDS)\include\dinkumware;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <BCC_ZeroLengthEmptyBaseClass>true</BCC_ZeroLengthEmptyBaseClass>
+        <ILINK_LibraryPath>$(BDS)\lib;$(BDS)\Projects\Lib;$(BDS)\Projects;$(BDS)\lib\obj;C:\vmap\avicorr\CVS;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_Defines>NO_STRICT;$(BCC_Defines)</BCC_Defines>
+        <BRCC_Defines>_DEBUG;$(BRCC_Defines)</BRCC_Defines>
+        <TASM_Defines>_DEBUG;$(TASM_Defines)</TASM_Defines>
+        <Multithreaded>true</Multithreaded>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Icon_MainIcon>vmap_Icon.ico</Icon_MainIcon>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+        <BCC_wpar>false</BCC_wpar>
+        <BCC_waus>false</BCC_waus>
+        <ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <LinkPackageStatics>vcl.lib;rtl.lib;vclx.lib;vclimg.lib</LinkPackageStatics>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+        <DCC_Optimize>true</DCC_Optimize>
+        <BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+        <BCC_UseRegisterVariables>Always</BCC_UseRegisterVariables>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+        <IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+        <BCC_StackFrames>false</BCC_StackFrames>
+        <ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_Defines>NDEBUG;$(BCC_Defines)</BCC_Defines>
+        <TASM_Debugging>None</TASM_Debugging>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <LinkPackageStatics>vcl.lib;rtl.lib;vclx.lib;vclimg.lib</LinkPackageStatics>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1041</VersionInfo>
+                    <VersionInfo Name="CodePage">932</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dclite60.bpl">Borland Integrated Translation Environment</ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dclact60.bpl">Borland ActionBar Components</ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dclnet60.bpl">Borland Internet Components</ExcludedPackages>
+                    <ExcludedPackages Name="c:\program files\borland\cbuilder6\Bin\dclsoap60.bpl">Borland SOAP Components</ExcludedPackages>
+                </ExcludedPackages>
+                <HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Count">6</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item0">$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\aviimage;C:\src\avicorr;C:\vmap\avicorr</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item1">$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\aviimage;C:\src\avicorr</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item2">$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\aviimage;C:\vmap\avicorr</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item3">$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\src\avicorr;C:\aviimage</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item4">$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\src\avicorr</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item5">$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\vmap\avicorr</HistoryLists_hlIncludePath>
+                </HistoryLists_hlIncludePath>
+                <HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Count">2</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item0">$(BCB)\lib;$(BCB)\Projects\Lib;$(BCB)\Projects;$(BCB)\lib\obj;C:\vmap\avicorr\CVS</HistoryLists_hlLibraryPath>
+                    <HistoryLists_hlLibraryPath Name="Item1">$(BCB)\lib;$(BCB)\Projects\Lib;V:\TAVIImage;V:\cbb6 projs\decode file;$(BCB)\Projects;V:\cbb6 projs\first ex;$(BCB)\lib\obj</HistoryLists_hlLibraryPath>
+                </HistoryLists_hlLibraryPath>
+                <HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Count">1</HistoryLists_hlConditionals>
+                    <HistoryLists_hlConditionals Name="Item0">_DEBUG</HistoryLists_hlConditionals>
+                </HistoryLists_hlConditionals>
+                <Debugging>
+                    <Debugging Name="DebugSourceDirs"/>
+                </Debugging>
+                <Parameters>
+                    <Parameters Name="RunParams"/>
+                    <Parameters Name="Launcher"/>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="DebugCWD"/>
+                    <Parameters Name="HostApplication"/>
+                    <Parameters Name="RemoteHost"/>
+                    <Parameters Name="RemotePath"/>
+                    <Parameters Name="RemoteLauncher"/>
+                    <Parameters Name="RemoteCWD"/>
+                    <Parameters Name="RemoteDebug">False</Parameters>
+                    <Parameters Name="RemoteParams"/>
+                    <Parameters Name="UseRemoteLauncher">False</Parameters>
+                    <Parameters Name="Debug Symbols Search Path"/>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <Compiler>
+                    <Compiler Name="ShowInfoMsgs">0</Compiler>
+                    <Compiler Name="LinkDebugVcl">0</Compiler>
+                    <Compiler Name="LinkCGLIB">0</Compiler>
+                </Compiler>
+                <Source>
+                    <Source Name="MainSource">decode.cpp</Source>
+                </Source>
+                <Linker>
+                    <Linker Name="LibPrefix"/>
+                    <Linker Name="LibSuffix"/>
+                    <Linker Name="LibVersion"/>
+                </Linker>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                </ProjectProperties>
+                <HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Count">1</HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Item0">.</HistoryLists_hlFinalOutputDir>
+                </HistoryLists_hlFinalOutputDir>
+                <HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Count">1</HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Item0">$(BDS)\lib\debug;$(BDS)\lib;$(BDS)\Projects\Lib;$(BDS)\Projects;$(BDS)\lib\obj;C:\vmap\avicorr\CVS</HistoryLists_hlILINK_LibraryPath>
+                </HistoryLists_hlILINK_LibraryPath>
+                <HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Count">1</HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Item0">Debug_Build</HistoryLists_hlIntermediateOutputDir>
+                </HistoryLists_hlIntermediateOutputDir>
+            </CPlusPlusBuilder.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+    <ItemGroup>
+        <ResFiles Include="C:\development\newvmap\icon.res">
+            <BuildOrder>11</BuildOrder>
+        </ResFiles>
+        <CppCompile Include="aviimage.cpp">
+            <DependentOn>aviimage.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="AVIWrite.cpp">
+            <DependentOn>AVIWrite.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <ResFiles Include="corrtest.res">
+            <BuildOrder>4</BuildOrder>
+        </ResFiles>
+        <CppCompile Include="decode.cpp">
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit1.cpp">
+            <Form>Form1</Form>
+            <DependentOn>Unit1.h</DependentOn>
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit2.cpp">
+            <Form>Form2</Form>
+            <DependentOn>Unit2.h</DependentOn>
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit3.cpp">
+            <Form>Form3</Form>
+            <DependentOn>Unit3.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit4.cpp">
+            <Form>Form4</Form>
+            <DependentOn>Unit4.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit5.cpp">
+            <Form>Form5</Form>
+            <DependentOn>Unit5.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit6.cpp">
+            <Form>ParmDialog</Form>
+            <DependentOn>Unit6.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit7.cpp">
+            <Form>Form7</Form>
+            <DependentOn>Unit7.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <FormResources Include="Unit4.dfm"/>
+        <FormResources Include="Unit3.dfm"/>
+        <FormResources Include="Unit2.dfm"/>
+        <FormResources Include="Unit7.dfm"/>
+        <FormResources Include="Unit6.dfm"/>
+        <FormResources Include="Unit5.dfm"/>
+        <FormResources Include="Unit1.dfm"/>
+        <BuildConfiguration Include="Release Build">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug Build">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>
