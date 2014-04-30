@@ -968,8 +968,8 @@ void __fastcall TForm1::WMDropFiles(TMessage &message)
 	char	buffer[2048] ;
 
 	drop = (HANDLE)message.WParam ;
-	::DragQueryFile( drop, 0, &buffer[0], 2048 ) ;
-	::DragFinish( drop ) ;
+	::DragQueryFile((HDROP__ *) drop, 0, &buffer[0], 2048 ) ;
+	::DragFinish( (HDROP__ *) drop ) ;
 #ifdef _DELPHI_STRING_UNICODE
 	DecodeFile((wchar_t *)buffer);
 #else
