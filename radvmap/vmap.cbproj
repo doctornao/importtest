@@ -326,6 +326,10 @@
             <DependentOn>Unit7.h</DependentOn>
             <BuildOrder>10</BuildOrder>
         </CppCompile>
+        <RcItem Include="vmap_Icon1.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>Icon_1</ResourceId>
+        </RcItem>
         <FormResources Include="Unit4.dfm"/>
         <FormResources Include="Unit3.dfm"/>
         <FormResources Include="Unit2.dfm"/>
