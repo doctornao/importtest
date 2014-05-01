@@ -10,21 +10,20 @@ USEFORM("Unit7.cpp", Form7);
 USEFORM("Unit6.cpp", ParmDialog);
 USEFORM("Unit5.cpp", Form5);
 USEFORM("Unit1.cpp", Form1);
-W//---------------------------------------------------------------------------
-INAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
         try
         {
                  Application->Initialize();
                  Application->Title = "basic analysis";
-                 ApApplication->CreateForm(__classid(TForm1), &Form1);
+				 Application->CreateForm(__classid(TForm1), &Form1);
 		Application->CreateForm(__classid(TForm2), &Form2);
 		Application->CreateForm(__classid(TForm3), &Form3);
 		Application->CreateForm(__classid(TForm4), &Form4);
 		Application->CreateForm(__classid(TForm5), &Form5);
 		Application->CreateForm(__classid(TParmDialog), &ParmDialog);
 		Application->CreateForm(__classid(TForm7), &Form7);
-		plication->Run();
+		Application->Run();
         }
         catch (Exception &exception)
         {
