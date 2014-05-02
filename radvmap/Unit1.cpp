@@ -4919,7 +4919,8 @@ void __fastcall TForm1::LoadRoiClick(TObject *Sender)
 {
         AnsiString sfilename;
         int     count;
-        int     sx,sy,ex,ey;
+		int     sx,sy,ex,ey;
+		char	first;
 
         if( LoadRoiDialog->Execute()){
                 sfilename = LoadRoiDialog->FileName;
@@ -4940,7 +4941,11 @@ void __fastcall TForm1::LoadRoiClick(TObject *Sender)
 
                 //first = *(line->Strings[0].c_str());
                 //pp = line->Strings[0].c_str()+1;
-                //second = *(line->Strings[0].c_str()+1);
+				//second = *(line->Strings[0].c_str()+1);
+
+				first = *(line->Strings[0].c_str());
+				if( first == '/' || first == '#' )
+					continue;
 
                 sx = StrToInt(line->Strings[0]);
                 sy = StrToInt(line->Strings[1]);
