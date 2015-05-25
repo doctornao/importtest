@@ -3131,8 +3131,11 @@ void __fastcall TForm1::SequentialClick(TObject *Sender)
 
                                 }
                         }
-                        sumdown = sqrt(sumdownleft)*sqrt(sumdownright);
-                        sum = sumupper/sumdown;
+						sumdown = sqrt(sumdownleft)*sqrt(sumdownright);
+						if( sumdown == 0.0 )
+							sum = 0.0;
+						else
+							sum = sumupper/sumdown;
 
                         horpos = 400*deltaindex/deltalimit;
 
